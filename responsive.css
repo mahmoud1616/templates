@@ -2,64 +2,120 @@
   margin: 0;
   font-family: sans-serif;
 }
-nav {
+.fixed {
   width: 100%;
-  height: 50px;
+  height: 40px;
   background: #000;
   color: #fff;
   text-transform: uppercase;
   position: fixed;
   font-size: 1em;
-  display: flex;
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 13% 40% 7%;
+  grid-template-areas: "home band tour contact more main search";
 }
-nav :hover {
+.fixed :hover {
   background: #999;
 }
-nav a {
-  padding: 15px 25px 0;
+#f-home,
+#f-band,
+#f-tour,
+#f-more,
+#f-contact,
+#f-search {
+  height: 40px;
   color: #fff;
+}
+
+#f-home {
+  grid-area: home;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#f-band {
+  grid-area: band;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#f-tour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: tour;
+}
+#f-contact {
+  grid-area: contact;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#f-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: more;
+}
+#f-main:hover {
+  height: 10px;
+}
+#f-main {
+  color: #000;
+  visibility: hidden;
+}
+#f-search:hover {
+  background: red;
+}
+#f-search {
+  grid-area: search;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fixed a {
   text-decoration: none;
 }
-nav details {
-  padding: 15px 0;
-  width: 140px;
-  color: #fff;
+.fixed details {
   display: inline;
   text-align: center;
   cursor: pointer;
 }
-nav summary {
+.fixed summary {
+  height: 40px;
   outline: none;
-  padding: 0 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-nav details p {
+.fixed details p {
   padding: 15px 10px;
   background: #f9f9f9;
   color: #000;
 }
+
 #home {
   width: 100%;
   height: 600px;
   background-image: url(photos/home.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding: 40px 0 0 0;
 }
-#home p,
-#home h3 {
-  color: #fff;
-}
 #home p {
   margin: 10px 0px 30px;
   font-size: 1.5em;
   text-transform: capitalize;
+  color: #f9f9f9;
 }
 #home h3 {
   font-size: 2em;
+  color: #f9f9f9;
   text-transform: uppercase;
 }
 
@@ -284,4 +340,18 @@ nav details p {
 #contact .social a {
   color: #222;
   margin: 0 35px;
+}
+@media screen and (max-width: 1000px) {
+  .fixed {
+    width: 100%;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    position: fixed;
+    font-size: 1em;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 20% 10% 10%;
+    grid-template-areas: "home band tour contact more main search";
+  }
 }
