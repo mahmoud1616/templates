@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+.fixed .f-container details {
+  display: none;
+}
+.fixed {
+  width: 100%;
+  height: 40px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  position: fixed;
+  font-size: 1em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "right left";
+}
+.fixed :hover {
+  background: #999;
+}
+.fixed .right {
+  grid-area: right;
+  width: 100%;
+  display: inline;
+  display: grid;
+  grid-template-columns: 18% 18% 18% 18% 28%;
+  grid-template-areas: "home band tour contact more";
+}
+#f-home,
+#f-band,
+#f-tour,
+#f-more,
+#f-contact {
+  height: 40px;
+  color: #fff;
+}
+
+#f-home {
+  grid-area: home;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#f-band {
+  grid-area: band;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#f-tour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: tour;
+}
+#f-contact {
+  grid-area: contact;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#f-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: more;
+}
+#f-main:hover {
+  height: 10px;
+}
+#f-main {
+  color: #000;
+  visibility: hidden;
+}
+#f-search:hover {
+  background: red;
+}
+#f-search {
+  width: min-content;
+}
+.fixed a {
+  text-decoration: none;
+}
+.fixed details {
+  display: inline;
+  text-align: center;
+  cursor: pointer;
+}
+.fixed summary {
+  height: 40px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fixed details p {
+  padding: 15px 10px;
+  background: #f9f9f9;
+  color: #000;
+}
+.fixed #f-search i:hover {
+  background-color: red;
+}
+.fixed .left {
+  grid-area: left;
+}
+#f-search {
+  float: right;
+  text-align: center;
+  padding: 10px 0 0 0;
+  width: 70px;
+  height: 30px;
+}
+.fixed .left,
+.fixed .right:hover {
+  background: #000;
+}
+
+#home {
+  width: 100%;
+  height: 600px;
+  background-image: url(photos/home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 40px 0 0 0;
+}
+#home p {
+  margin: 10px 0px 30px;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  color: #f9f9f9;
+}
+#home h3 {
+  font-size: 2em;
+  color: #f9f9f9;
+  text-transform: uppercase;
+}
+
+#band {
+  width: 100%;
+  height: 650px;
+}
+#band .text {
+  width: 56%;
+  padding: 50px 0 0 0;
+  margin: 0 auto 50px;
+  font-size: 15px;
+  line-height: 1.6em;
+}
+#band .text h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+#band .text .one {
+  text-align: center;
+  color: rgb(143, 140, 140);
+  font-style: italic;
+  text-transform: capitalize;
+  padding: 10px;
+}
+#band .text .one {
+  padding: 10px;
+}
+#band .img {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#band .img #b-i-one,
+#band .img #b-i-two,
+#band .img #b-i-three {
+  width: 25%;
+  display: inline-block;
+  margin: 0 auto;
+}
+#band .img img {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+}
+#band .img p {
+  margin: 0 0 7% 35%;
+}
+#tour {
+  width: 100%;
+  height: 800px;
+  background: #000;
+  color: #fff;
+}
+#tour .text {
+  width: 100%;
+  text-align: center;
+}
+#tour .text h2 {
+  padding: 70px 0 0 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: lighter;
+}
+#tour .text p {
+  padding: 20px 0 40px;
+  text-transform: capitalize;
+  font-style: italic;
+  color: rgb(143, 140, 140);
+}
+#tour .month-c {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#tour .months {
+  width: 60%;
+  margin: 0 0 30px;
+  color: rgb(83, 83, 83);
+  background: #fff;
+  border-radius: 5px;
+}
+#tour .months p {
+  padding: 10px;
+  display: inline-block;
+}
+#tour .months span {
+  background: red;
+  color: #fff;
+  padding: 2px 10px;
+}
+#tour .months .m-sold {
+  float: right;
+  margin: 1% 2% 0 0;
+  border-radius: 5px;
+}
+
+#tour .months #m-number {
+  float: right;
+  width: 25px;
+  margin: 1% 5.5% 0 0;
+  padding: 3px 0 0 0;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+  text-align: center;
+}
+#tour .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#t-i-one,
+#t-i-two,
+#t-i-three {
+  width: 18.5%;
+  margin: 0 1%;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+}
+#tour .img img:hover {
+  filter: grayscale(70%);
+}
+#tour .img img {
+  width: 100%;
+  height: 185px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#tour .img .date {
+  color: rgb(83, 83, 83);
+  padding: 20px 5px 20px 15px;
+}
+#tour .img h4 {
+  padding: 15px 5px 0 15px;
+}
+#tour .img p {
+  padding: 0 5px 0 15px;
+}
+#tour .img button {
+  color: #fff;
+  background: #000;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  border: none;
+}
+#contact {
+  width: 100%;
+  height: 520px;
+  text-align: center;
+}
+#contact .text {
+  padding: 50px 0 0 0;
+  width: 100%;
+}
+#contact .text h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  padding: 0 0 20px;
+}
+#contact .text p {
+  font-style: italic;
+  color: rgb(83, 83, 83);
+  text-transform: capitalize;
+}
+#contact .c-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#contact .note {
+  width: 60%;
+  margin: 50px auto 0;
+  text-align: start;
+  display: grid;
+  grid-template-columns: 50% 25% 10% 15%;
+  grid-template-areas:
+    "phone name email email"
+    "mail message message message"
+    "submit submit submit submit";
+}
+#contact .note p {
+  display: inline;
+}
+#contact .note input {
+  height: 30px;
+}
+#phone {
+  grid-area: phone;
+}
+#name {
+  grid-area: name;
+  margin: 0 0 10px;
+}
+#email {
+  margin: 0 0 10px 3px;
+  grid-area: email;
+}
+#mail {
+  margin: 15px 0 0 0;
+  grid-area: mail;
+}
+#message {
+  margin: 10px 0 15px 0;
+  grid-area: message;
+}
+#message,
+#email,
+#name,
+#submit {
+  border-radius: 5px;
+  border: #000 solid 2px;
+}
+#submit {
+  width: 75px;
+  padding: 10px 0 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  border: none;
+  float: right;
+}
+#contact .c-container .submit {
+  grid-area: submit;
+  float: right;
+}
+#contact .social {
+  margin: 100px 0 0 0;
+  width: 100%;
+  height: 140px;
+  background: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact .social a {
+  color: #222;
+  margin: 0 5%;
+}
+@media only screen and (max-width: 1030px) {
+  #band .text {
+    width: 70%;
+    line-height: 1.4em;
+  }
+  #band .img img {
+    height: 150px;
+  }
+  #band .img {
+    width: 80%;
+  }
+  #t-i-one,
+  #t-i-two,
+  #t-i-three {
+    width: 27%;
+  }
+  #tour .months {
+    width: 85%;
+  }
+  #contact .note {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 25% 15% 10%;
+    grid-template-areas:
+      "phone name email email"
+      "mail message message message"
+      ". . . submit";
+  }
+  #contact .social a {
+    margin: 0 7%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .fixed {
+    display: block;
+    display: flex;
+  }
+  .fixed .right {
+    width: fit-content;
+  }
+  .f-container {
+    width: 100%;
+  }
+  .f-container details {
+    float: right;
+    text-align: start;
+    width: 100%;
+    height: 40px;
+  }
+  .f-container summary {
+    height: 25px;
+    float: right;
+    padding: 5px 20px 0 0;
+  }
+  #f-c-p{
+    margin-top:40px ;
+  }
+
+  #f-c-home:hover {
+    background-color: #999;
+  }
+  #f-c-home {
+    padding: 12px 10px 10px 10px;
+    margin: 0 0 0 10px;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
+  }
+
+  #f-home {
+    display: inline-block;
+    height: 28px;
+    padding: 12px 15px 0 15px;
+  }
+  #menu {
+    width: 23px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0 0 0;
+  }
+  .fixed .right {
+    display: inline;
+  }
+  .fixed .f-container details {
+    display: block;
+  }
+  .fixed .f-container summary {
+    display: block;
+  }
+  .fixed .c-container details summary {
+    list-style: none;
+  }
+  .fixed details summary::-webkit-details-marker {
+    display: none;
+  }
+  #f-c-link:hover {
+    background-color: #999;
+  }
+  #f-c-link {
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+  }
+  .fixed .f-container details p {
+    background: rgb(0, 0, 0);
+  }
+  .fixed :hover {
+    background: #000;
+  }
+  #home {
+    height: 400px;
+  }
+  #band {
+    height: max-content;
+    padding: 0 0 20px 0;
+  }
+  #band .text {
+    width: 85%;
+    line-height: 1.5em;
+  }
+  #band .img {
+    width: 50%;
+    display: block;
+  }
+  #band .img #b-i-one,
+  #band .img #b-i-two,
+  #band .img #b-i-three {
+    width: 100%;
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #tour {
+    height: max-content;
+    padding: 0 0 20px 0;
+  }
+  #tour .img {
+    display: block;
+  }
+  #t-i-one,
+  #t-i-two,
+  #t-i-three {
+    width: 75%;
+    margin: 20px auto;
+  }
+  #tour .img img {
+    height: 170px;
+  }
+  #tour .img h4 {
+    padding: 15px 5px 0 15px;
+  }
+  #tour .img button {
+    padding: 12px;
+    margin: 5px 0 8px 15px;
+  }
+  #f-band,
+  #f-tour,
+  #f-more,
+  #f-contact,
+  #f-home,
+  #f-search {
+    display: none;
+  }
+}

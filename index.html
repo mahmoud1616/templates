@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <nav class="fixed">
+      <div class="right">
         <a href="#home" id="f-home">home</a>
         <a href="#band" id="f-band">band</a>
         <a href="#tour" id="f-tour">tour</a>
@@ -20,8 +21,29 @@
           <p>extras</p>
           <p>media</p>
         </details>
-        <p id="f-main">.</p>
-        <p id="f-search"><i class="fa fa-search" ></i></p>
+      </div>
+      <div class="left">
+        <p ><i class="fa fa-search" id="f-search"></i></p>
+      </div>
+      <div class="f-container">
+        <details>
+            <a href="#home" id="f-c-home">home</a>
+          <summary>
+            <div id="menu"></div>
+            <div id="menu"></div>
+            <div id="menu"></div>
+          </summary>
+          <p>
+            <a href="#band"  id="f-c-link" >band</a>
+          </p>
+          <p>
+            <a href="#tour" id="f-c-link" >tour</a>
+          </p>
+          <p>
+            <a href="#contact"  id="f-c-link">contact</a>
+          </p>
+        </details>
+      </div>
     </nav>
     <header id="home">
       <h3>egypt</h3>
@@ -47,63 +69,63 @@
         </div>
       </div>
       <div class="img">
-        <div class="name">
-          <p>Name</p>
-          <p>Name</p>
-          <p>Name</p>
-        </div>
-        <div class="img">
-          <img src="photos/band.png" alt="" class="one"/>
-          <img src="photos/band.png" alt="" class="two" />
-          <img src="photos/band.png" alt="" class="three" />
-        </div>
+          <div id="b-i-one">
+            <p>Name</p>
+            <img src="photos/band.png" alt=""/>
+          </div>
+          <div id="b-i-two">
+            <p>Name</p>
+            <img src="photos/band.png" alt=""/>
+          </div>
+          <div id="b-i-three">
+            <p>Name</p>
+            <img src="photos/band.png" alt=""/>
+          </div>
     </section>
     <section id="tour">
       <div class="text">
         <h2>tour dates</h2>
         <p>remember to book your tickets!</p>
       </div>
-      <div class="months">
-        <p>
-          september
-        </p>
-        <span>sold out</span>
-        <hr>
-        <p class="october">
-          October
-        </p>
-        <span >sold out</span>
-        <hr>
-        <p class="november">
-          november
-        </p>
-        <span class="n">3</span>
+      <div class="month-c">
+        <div class="months">
+          <p id="m-september">
+            september
+          </p>
+          <span class="m-sold">sold out</span>
+          <hr>
+          <p id="m-october">
+            October
+          </p>
+          <span class="m-sold">sold out</span>
+          <hr>
+          <p id="m-november">
+            november
+          </p>
+          <span id="m-number">3</span>
+        </div>
       </div>
       <div class="img">
-        <div class="image">
+        <div id="t-i-one">
           <img src="photos/tour2.png" alt="">
-          <img src="photos/tour3.png" alt="">
-          <img src="photos/tour1.png" alt="">
+          <h4>New York</h4>
+          <p class="date">Fri 27 Nov 2022</p>
+          <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+          <button>Buy ticket</button>
         </div>
-        <div class="bg">
-          <span class="u-photo">
-            <h4>New York</h4>
-            <p class="date">Fri 27 Nov 2022</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button>Buy ticket</button>
-          </span>
-          <span class="u-photo">
-            <h4>Paris</h4>
-            <p class="date">Sat 28 Nov 2022</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button>Buy ticket</button>
-          </span>
-          <span class="u-photo">
-            <h4>San Francisco</h4>
-            <p class="date">Sun 29 Nov 2022</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button>Buy ticket</button>
-          </span>
+        <div id="t-i-two">
+          <img src="photos/tour3.png" alt="">
+          <h4>Paris</h4>
+          <p class="date">Sat 28 Nov 2022</p>
+          <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+          <button>Buy ticket</button>
+        </div>
+        <div id="t-i-three">
+          <img src="photos/tour1.png" alt="">
+          <h4>San Francisco</h4>
+          <p class="date">Sun 29 Nov 2022</p>
+          <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+          <button>Buy ticket</button>
         </div>
       </div>
     </section>
@@ -112,13 +134,17 @@
         <h2>contact</h2>
         <p>Fan? Drop a note!</p>
       </div>
-      <div class="note">
-        <p id=" phone"> <i class="fa fa-phone"></i> phone: +01550</p>
-        <input id="name" type="text" placeholder="Name">
-        <input id="email" type="email" placeholder="Email">
-        <p id="mail"> <i class="fa fa-envelope"></i> Email: mahmoud@gmail.com</p>
-        <input id="message" type="text" placeholder="message">
-        <input id="submit" type="submit" value="send">
+      <div class="c-container">
+        <div class="note">
+          <p id=" phone"> <i class="fa fa-phone"></i> phone: +01550</p>
+          <input id="name" type="text" placeholder="Name">
+          <input id="email" type="email" placeholder="Email">
+          <p id="mail"> <i class="fa fa-envelope"></i> Email: mahmoud@gmail.com</p>
+          <input id="message" type="text" placeholder="message">
+          <div class="submit">
+            <input id="submit" type="submit" value="send">
+          </div>
+        </div>
       </div>
       <div class="social">
         <a href="https://ar-ar.facebook.com/" target="_blank"><i class="fa fa-facebook-f" style="font-size:24px"></i></a>
